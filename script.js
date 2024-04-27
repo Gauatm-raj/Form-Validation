@@ -35,7 +35,7 @@ function validate(evt){
     evt.preventDefault();
      const isConfirmed = confirm("Are you sure you want to submit?");
 
-    if(email.value!="" && password!=""){
+    if(email.value!="" && password.value!=""){
         if (isConfirmed) {
              alert("Successful signup!");
           } else {
