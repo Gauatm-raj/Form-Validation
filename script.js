@@ -22,7 +22,7 @@ function checkedemail(){
 }
 password.addEventListener("input", checking)
 function checking(){
-    if(password.value.length>8){
+    if(password.value.length>8 && email.value!=""){
         msg2.innerText="All good to go !"
         msg2.style.color="green"; 
        
