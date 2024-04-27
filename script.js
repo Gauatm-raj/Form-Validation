@@ -33,26 +33,19 @@ function checking(){
 submitBtn.addEventListener("click" , validate);
 function validate(evt){
     evt.preventDefault();
-    
-    
-    const isConfirmed = confirm("Are you sure you want to submit?");
-    
-    if (isConfirmed) {
-       
-      // If user confirms, show successful signup alert
-      alert("Successful signup!");
-      // Alternatively, you can perform form submission here
-      
-    } else {
-      // If user cancels, clear all input values and stay on the same page
-      
-      document.getElementById("form").reset();
-      msg1.innerText="Make sure email is more than 3 characters and has @ and a.";
-      msg2.innerText="Make sure password is more than 8 characters"
-        msg2.style.color="red"; // Clear form inputs
+     const isConfirmed = confirm("Are you sure you want to submit?");
+
+    if(email.value!="" && password!=""){
+        if (isConfirmed) {
+             alert("Successful signup!");
+          } else {
+             document.getElementById("form").reset();
+            msg1.innerText="Make sure email is more than 3 characters and has @ and a.";
+            msg2.innerText="Make sure password is more than 8 characters"
+              msg2.style.color="red"; 
+          }
+       }else{
+        alert("fill email and password")
+      }
     }
-    
-    
-        
-}
 
